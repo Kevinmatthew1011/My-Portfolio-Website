@@ -62,9 +62,6 @@ My-Portfolio-Website/
 ├── images/
 └── icons/
 
-yaml
-Copy code
-
 ---
 
 ## 🌍 Live Demo
