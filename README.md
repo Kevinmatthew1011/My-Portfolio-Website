@@ -49,18 +49,11 @@ It also acts as a **digital resume** designed to create a strong online presence
 
 ## 📁 Folder Structure
 
-My-Portfolio-Website/
-│── index.html
-│── about.html
-│── contact.html
-│── projects.html
-│── styles/
-│ └── style.css
-│── scripts/
-│ └── main.js
-└── assets/
-├── images/
-└── icons/
+├── .vscode/
+├── Image/
+│ └── (your images here)
+├── index.html
+└── style.css
 
 ---
 
