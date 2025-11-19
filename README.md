@@ -46,14 +46,18 @@ It also acts as a **digital resume** designed to create a strong online presence
 </p>
 
 ---
-
 ## 📁 Folder Structure
 
+```
+My-Portfolio-Website/
+├── .git/
 ├── .vscode/
 ├── Image/
-│ └── (your images here)
+│   └── (your images here)
 ├── index.html
 └── style.css
+```
+
 
 ---
 
