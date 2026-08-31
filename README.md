@@ -2,6 +2,8 @@
 
 Personal portfolio website built with **Next.js App Router**, **TypeScript**, and **Tailwind CSS**.
 
+**Production:** [portfolio-livid-tau-qf45962w1n.vercel.app](https://portfolio-livid-tau-qf45962w1n.vercel.app)
+
 ## 🚀 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
@@ -9,6 +11,7 @@ Personal portfolio website built with **Next.js App Router**, **TypeScript**, an
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Linting**: [ESLint](https://eslint.org/)
 - **Deployment**: [Vercel](https://portfolio-livid-tau-qf45962w1n.vercel.app)
+- **SEO**: Canonical metadata, Open Graph/Twitter cards, sitemap, robots rules, and generated site icon
 
 ## 📁 Project Structure
 
@@ -16,7 +19,9 @@ Personal portfolio website built with **Next.js App Router**, **TypeScript**, an
 src/
 ├── app/
 │   ├── globals.css
+│   ├── icon.svg
 │   ├── layout.tsx
+│   ├── opengraph-image.tsx
 │   └── page.tsx
 ├── components/
 │   ├── layout/
@@ -42,8 +47,8 @@ src/
 ## 🛠️ Getting Started
 
 ```bash
-# Install dependencies
-npm install
+# Install exact locked dependencies
+npm ci
 
 # Run the development server
 npm run dev
@@ -51,6 +56,8 @@ npm run dev
 # Build for production
 npm run build
 ```
+
+Run `npm run lint` and `npm run type-check` before opening a pull request.
 
 ## 🌐 Live Site
 

@@ -29,6 +29,16 @@ export default function Footer() {
           >
             Email
           </a>
+          {profileConfig.socials.resumeUrl && (
+            <a
+              href={profileConfig.socials.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-zinc-300 focus-visible:outline-2 focus-visible:outline-blue-500"
+            >
+              Resume
+            </a>
+          )}
         </div>
       </div>
     </footer>

@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const productionUrl = "https://portfolio-livid-tau-qf45962w1n.vercel.app";
+const title = "Kevin Matthew | Full-Stack Developer & AI/ML Builder";
+const description =
+  "Portfolio of Kevin Matthew, a Computer Science student building full-stack applications and applied AI systems.";
+
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#fafafa" },
@@ -11,9 +16,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kevin Matthew | Full-Stack Developer & AI/ML Builder",
-  description:
-    "Portfolio of Kevin Matthew, a Computer Science student, Full-Stack Developer, and AI/ML builder focused on modern web applications and practical machine learning systems.",
+  metadataBase: new URL(productionUrl),
+  title,
+  description,
   keywords: [
     "Kevin Matthew",
     "Full-Stack Developer",
@@ -24,24 +29,30 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Kevin Matthew", url: "https://github.com/Kevinmatthew1011" }],
   creator: "Kevin Matthew",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio-livid-tau-qf45962w1n.vercel.app",
+    url: productionUrl,
     siteName: "Kevin Matthew Portfolio",
-    title: "Kevin Matthew | Full-Stack Developer & AI/ML Builder",
-    description:
-      "Full-stack applications and AI-powered systems built with modern web technologies and machine learning.",
+    title,
+    description,
   },
   twitter: {
-    card: "summary",
-    title: "Kevin Matthew | Full-Stack Developer & AI/ML Builder",
-    description:
-      "Full-stack applications and AI-powered systems built with modern web technologies and machine learning.",
+    card: "summary_large_image",
+    title,
+    description,
   },
   robots: {
     index: true,
     follow: true,
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 

@@ -50,6 +50,16 @@ export default function Hero() {
               >
                 Contact Me
               </a>
+              {profileConfig.socials.resumeUrl && (
+                <a
+                  href={profileConfig.socials.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border border-blue-500/50 bg-blue-500/10 px-7 py-3.5 text-base font-semibold text-blue-300 shadow-sm transition-all hover:border-blue-400 hover:bg-blue-500/20 hover:text-blue-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                >
+                  View Resume
+                </a>
+              )}
             </div>
 
             {/* Professional Links */}

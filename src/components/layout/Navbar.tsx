@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { profileConfig } from "@/data/profile";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -74,6 +75,16 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          {profileConfig.socials.resumeUrl && (
+            <a
+              href={profileConfig.socials.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 rounded-lg border border-blue-500/40 bg-blue-500/10 px-4 py-2 text-blue-300 transition-colors hover:border-blue-400 hover:bg-blue-500/20 hover:text-blue-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+            >
+              Resume
+            </a>
+          )}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -128,6 +139,17 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+            {profileConfig.socials.resumeUrl && (
+              <a
+                href={profileConfig.socials.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="rounded-lg px-4 py-3 text-base font-medium text-blue-300 transition-colors hover:bg-blue-500/10 hover:text-blue-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+              >
+                Resume ↗
+              </a>
+            )}
           </nav>
         </div>
       )}
