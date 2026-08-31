@@ -3,10 +3,25 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: light dark;
+    color-scheme: dark;
   }
 
   body {
-    @apply bg-zinc-50 text-zinc-900 antialiased selection:bg-blue-600 selection:text-white dark:bg-zinc-950 dark:text-zinc-100;
+    @apply bg-zinc-950 text-zinc-100 antialiased selection:bg-blue-500 selection:text-white;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
   }
 }

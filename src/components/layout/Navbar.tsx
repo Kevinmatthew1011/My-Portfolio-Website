@@ -45,17 +45,17 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-white/90 backdrop-blur-md transition-colors dark:border-zinc-800/80 dark:bg-zinc-950/90">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3.5">
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-850 bg-zinc-950/85 backdrop-blur-md transition-colors">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4.5">
         {/* Brand */}
         <Link
           href="#hero"
           onClick={closeMenu}
-          className="group text-base font-semibold tracking-tight text-zinc-900 transition-colors hover:text-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-zinc-100 dark:hover:text-blue-400"
+          className="group text-xl font-bold tracking-tight text-white transition-colors hover:text-blue-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
           aria-label="Kevin Matthew - Home"
         >
           <span>Kevin Matthew</span>
-          <span className="text-blue-600 transition-colors group-hover:text-blue-500 dark:text-blue-400">
+          <span className="text-blue-500 transition-colors group-hover:text-blue-400">
             .
           </span>
         </Link>
@@ -63,13 +63,13 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav
           aria-label="Main Navigation"
-          className="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-600 dark:text-zinc-400"
+          className="hidden md:flex items-center gap-2 text-sm lg:text-base font-medium text-zinc-300"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="rounded-md px-3 py-1.5 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
+              className="rounded-lg px-4 py-2 transition-colors hover:bg-zinc-900 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
             >
               {link.name}
             </a>
@@ -83,11 +83,11 @@ export default function Navbar() {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 md:hidden dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
+          className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 md:hidden"
         >
           {isOpen ? (
             <svg
-              className="h-4 w-4"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2"
@@ -98,7 +98,7 @@ export default function Navbar() {
             </svg>
           ) : (
             <svg
-              className="h-4 w-4"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2"
@@ -115,15 +115,15 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="border-b border-zinc-200 bg-white px-6 pt-2 pb-6 md:hidden dark:border-zinc-800 dark:bg-zinc-950"
+          className="border-b border-zinc-800 bg-zinc-950 px-6 pt-3 pb-8 md:hidden"
         >
-          <nav aria-label="Mobile Navigation" className="flex flex-col space-y-1">
+          <nav aria-label="Mobile Navigation" className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={closeMenu}
-                className="rounded-md px-3 py-2.5 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
+                className="rounded-lg px-4 py-3 text-base font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               >
                 {link.name}
               </a>
