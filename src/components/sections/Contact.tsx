@@ -1,0 +1,94 @@
+import React from "react";
+import { profileConfig } from "@/data/profile";
+
+export default function Contact() {
+  return (
+    <section
+      id="contact"
+      aria-label="Contact Section"
+      className="border-t border-zinc-800/80 py-20 lg:py-32"
+    >
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-b from-zinc-900/90 to-zinc-950 p-8 text-center shadow-2xl sm:p-14 lg:p-16">
+          {/* Subtle Glow */}
+          <div
+            className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-72 w-96 -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-400">
+            Let&apos;s Connect
+          </span>
+
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Get in Touch
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg lg:text-xl">
+            Feel free to reach out regarding software projects, hackathons, or technical collaboration.
+          </p>
+
+          {/* Primary Action Button */}
+          <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
+            <a
+              href={profileConfig.socials.email}
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-white px-8 py-4 text-base font-semibold text-zinc-950 shadow-md transition hover:bg-zinc-200 hover:shadow-blue-500/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
+            >
+              <svg
+                className="h-5 w-5 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span>Send Email</span>
+            </a>
+
+            <a
+              href={profileConfig.socials.email}
+              className="text-base font-medium text-zinc-400 transition hover:text-blue-400"
+            >
+              {profileConfig.email}
+            </a>
+          </div>
+
+          {/* Secondary Professional Channels */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 pt-8 border-t border-zinc-800/80">
+            <a
+              href={profileConfig.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-xl border border-zinc-800 bg-zinc-900/80 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-700 hover:bg-zinc-800 hover:text-white focus-visible:outline-2 focus-visible:outline-blue-500"
+            >
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                />
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a
+              href={profileConfig.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-xl border border-zinc-800 bg-zinc-900/80 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-700 hover:bg-zinc-800 hover:text-white focus-visible:outline-2 focus-visible:outline-blue-500"
+            >
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.85 6.28a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
